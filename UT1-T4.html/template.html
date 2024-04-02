@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css"/>
     <title>DesarrolloWeb</title>
-<<<<<<< HEAD
-=======
     <style>
       body {
         text-align: center;
@@ -19,43 +18,10 @@
         margin-right: auto;
       }
     </style>
->>>>>>> 6718c578bd9f5abf0466af99e4cdb211332914b8
   </head>
   <body>
     <h1 style="text-align: center;">Desarrollo Web</h1>
     <h2 style="text-align: center;">Primer tarea Desarrollo Web</h2>  
-<<<<<<< HEAD
-    <h3>Registro de Usuario</h3>
-
-    <div>
-      <label for="mail">Correo Electrónico</label>
-      <input type="email" id="user"></input>
-    </div>
-
-    <div>
-      <label for="user">Usuario:</label>
-      <input type="text" id="user"></input>
-    </div>
-    
-
-    <div>
-      <label for="password">Contraseña:</label>
-      <input type="password" id="user"></input>
-    </div>
-
-    <div>
-      <input type="radio" name="person">Hombre</input>
-      <input type="radio" name="person">Mujer</input>
-      <input type="radio" name="person">Otro</input>
-    </div>
-
-
-
-  </body> 
-  
-</html>
-        
-=======
     <img src="https://images.unsplash.com/photo-1533745848184-3db07256e163?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de bienvenida"></body>
     <h3 style="text-align: center;">Registro de Usuario</h3>
      
@@ -64,20 +30,18 @@
       <input type="text" id="user" required></input>
     </div>
     
-    <div>
-      <label for="email">Correo Electrónico:</label>
-      <input type="email" id="email" placeholder="correo@ejemplo.com" required></input>
-    </div>
+    
+    <label for="email" >Correo Electrónico:</label>
+    <input type="email" id="email" placeholder="correo@ejemplo.com" required></input>
+    
 
     <div>
       <label for="password">Contraseña:</label>
       <input type="password" id="password" required></input>
     </div>
 
-    <div>
-      <label for="phone">Número de teléfono:</label>
-      <input type="tel"  id="phone" pattern="09[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Formato= 09X-XXX-XXX" required>
-    </div>
+    <label for="phone">Número de teléfono:</label>
+    <input type="tel"  id="phone" pattern="09[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Formato= 09X-XXX-XXX" required>
     
     <div>
       <label for="department">Elige un departamento:</label>
@@ -94,10 +58,8 @@
       </select>
     </div>
 
-    <div>
-      <label for="bday">Fecha de nacimiento:</label>
-      <input type="date" id="bday"></input>
-    </div>
+    <label for="bday">Fecha de nacimiento:</label>
+    <input type="date" id="bday" required></input>
 
     <div>
       <label>Género:</label>
@@ -106,11 +68,21 @@
       <input type="radio" name="gender" value="Other">Otro
     </div>
 
+    <input class="estilo" type="submit" value="Registrarse" required>
+    
+    <p class="estilo1">Peñarol o Nacional:</p>
+
+    <ul>
+      <li>
+        <input type="radio" name="fubol" value="Peñarol"> Peñarol
+      </li>
+      <li>
+        <input type="radio" name="fubol" value="Nacional">Nacional
+      </li>
+    </ul>
     <div>
-      <input type="submit" value="Registrarse">
     </div>
+    <p>Siempre Peñarol igual</p>
     
  </body> 
 </html>
-        
->>>>>>> 6718c578bd9f5abf0466af99e4cdb211332914b8
