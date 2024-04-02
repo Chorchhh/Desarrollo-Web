@@ -1,0 +1,45 @@
+.board {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+.list {
+    flex-direction: column;
+    background-color: black;
+    color:white;
+    border-radius: 1rem;
+    width: 33%;
+    height: 350px;
+}   
+.inicio {
+    display: flex;
+    color: white;
+    background-color: rgb(51, 52, 51);
+    padding: 2rem 0rem;
+    justify-content: space-evenly;
+}
+li {
+    margin: 2rem;
+}
+h2{
+    text-align: center;
+}
+
+@media (width > 760px) {
+    .board{
+        display:  flex;
+        flex-direction: row;
+    }
+}
+@media (width < 760px) {
+    .board{
+        display:  flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .list {
+        width: 70%;
+        margin-bottom: 2rem;
+        
+    }
+}
