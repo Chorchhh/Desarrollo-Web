@@ -1,0 +1,47 @@
+.estilo:hover {
+    /* background-color: aqua; */
+    border:solid 2px red;
+ }
+
+.estilo1::marker {
+    background-color: black;
+}
+
+.estilo1 {
+    background-color: yellow;
+}
+.estilo {
+    background-color: white;
+    color:yellow
+}
+input:required {
+    color:Red
+}
+
+li {
+    list-style-position: inside;
+    text-align: center;
+}
+li::marker {  
+    color:blueviolet;
+}
+
+
+ul > li {
+    border-bottom: 5px solid black; 
+}
+
+div + p {
+    color:sienna;
+
+}
+
+div ~ label {
+    color:yellow
+}   
+
+div::first-letter {
+    font-size: 150%;
+    color: blue;
+    font-weight: bold;
+}
