@@ -1,3 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/paisaje5.png);
+    background-size: auto;
+}
+
+.button {
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+}
 .board {
     display: flex;
     justify-content: space-evenly;
@@ -9,7 +22,7 @@
     color:white;
     border-radius: 1rem;
     width: 33%;
-    height: 350px;
+    min-height: 350px;
 }   
 .inicio {
     display: flex;
@@ -24,6 +37,8 @@ li {
 h2{
     text-align: center;
 }
+
+
 
 @media (width > 760px) {
     .board{
@@ -40,6 +55,6 @@ h2{
     .list {
         width: 70%;
         margin-bottom: 2rem;
-        
+
     }
 }
