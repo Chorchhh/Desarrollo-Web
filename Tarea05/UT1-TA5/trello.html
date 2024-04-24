@@ -1,75 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="style.css"/>
-        <style></style>
-        <title>FakeTrello</title>
-    </head>
-    <body> 
-        <div class="inicio">
-            <div>
-                <a href="inicio.html">Inicio</a>
-            </div> 
-            <div>
-                <img src="img/noti.png" alt="Notific" width="20px" height="20px">
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+    <title>FakeTrello</title>
+  </head>
+  <body>
+    <div class="inicio">
+      <div>
+        <a href="inicio.html">Inicio</a>
+      </div>
+      <div>
+        <img src="img/notification.png" class="notif" title="notificación" />
+      </div>
+    </div>
+    <div class="board">
+      <div class="list">
+        <h2>Tareas</h2>
+        <div id="tareas">
+          <!-- <div class="marginTask">
+                        <input type="text"></input>
+                        <button class="deleteTask">X</button>
+                    </div>
+                    <div class="marginTask">
+                        <input type="text"></input>
+                        <button class="deleteTask">X</button>
+                    </div>
+                    <div class="marginTask">
+                        <input type="text"></input>
+                        <button class="deleteTask">X</button>
+                    </div> -->
         </div>
-        <div class='board'>
-            <div class="list">
-                <h2>Tareas</h2>
-                <div class="cards" id="tareas">
-                    <li>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <input type="text">
-                    </li>
-                </div>
-                <div class="button">
-                    <button id="addButton">+</button>
-                </div>
-            </div>
-            <div class="list">
-                <h2>En proceso</h2>
-                <div class="cards" id="proceso">
-                    <li>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <input type="text">
-                    </li>
-                </div>
-                <div class="button">
-                    <button id="addButton2">+</button>
-                </div>
-            </div>
-            <div class="list">
-                <h2>Terminadas</h2>
-                <div class="cards" id="terminado">
-                    <li>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <input type="text">
-                    </li>
-                </div>
-                <div class="button">
-                    <button id="addButton3">+</button>
-                </div>
-            </div>
+        <div class="button">
+          <button id="addButton" data-list="tareas">+</button>
         </div>
-        <script src="script.js"></script>
-    </body>
+      </div>
+      <div class="list">
+        <h2>In progress</h2>
+        <div id="proceso">
+          <!-- <div class="marginTask">
+                        <input type="text"></input>
+                        <button class="deleteTask">X</button>
+                    </div>
+                    <div class="marginTask">
+                        <input type="text"></input>
+                        <button class="deleteTask">X</button>
+                    </div>
+                    <div class="marginTask">
+                        <input type="text"></input>
+                        <button class="deleteTask">X</button>
+                    </div> -->
+        </div>
+        <div class="button">
+          <button id="addButton2" data-list="proceso">+</button>
+        </div>
+      </div>
+      <div class="list">
+        <h2>Done</h2>
+        <div id="terminado">
+          <!-- <div class="marginTask">
+                        <input type="text"></input>
+                        <button class="deleteTask">X</button>
+                    </div>
+                    <div class="marginTask">
+                        <input type="text"></input>
+                        <button class="deleteTask">X</button>
+                    </div>
+                    <div class="marginTask">
+                        <input type="text"></input>
+                        <button class="deleteTask">X</button>
+                    </div> -->
+        </div>
+        <div class="button">
+          <button id="addButton3" data-list="terminado">+</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="modal">
+      <div class="modal__container">
+        <img
+          src="/UT1-TA5/img/notification2.png"
+          class="modal__img"
+          title="notificación2"
+        />
+        <h2 class="modal__title">Notificaciones</h2>
+        <p class="modal__paragraph">No tienes ninguna notificación :D</p>
+        <a href="#" class="modal__close">Cerrar</a>
+      </div>
+    </section>
+
+    <section class="task-modal modal">
+      <div class="modal__container">
+        <h2 class="modal__title">Agregar Tarea</h2>
+        <div id="taskForm">
+          <input type="text" name="title" class="tasks" placeholder="title" />
+          <input
+            type="text"
+            name="description"
+            class="tasks"
+            placeholder="description"
+          />
+          <input
+            type="text"
+            name="assignedTo"
+            class="tasks"
+            placeholder="assignedTo"
+          />
+          <input
+            type="date"
+            name="startDate"
+            class="tasks"
+            placeholder="startDate"
+          />
+          <input
+            type="date"
+            name="endDate"
+            class="tasks"
+            placeholder="endDate"
+          />
+          <input type="text" name="status" class="tasks" placeholder="status" />
+          <input
+            type="text"
+            name="priority"
+            class="tasks"
+            placeholder="priority"
+          />
+          <input
+            type="text"
+            name="comments"
+            class="tasks"
+            placeholder="comments"
+          />
+        </div>
+        <button class="modal__close">Agregar</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>

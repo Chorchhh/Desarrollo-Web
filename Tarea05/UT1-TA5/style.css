@@ -37,24 +37,102 @@ li {
 h2{
     text-align: center;
 }
+.marginTask {
+    margin: 2rem;
+}
+.modal {
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: 2s;
+}
+.modal__container {
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    padding: 3rem;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+.modal__title {
+    font-size: 2.5rem;
+}
+.modal__paragraph{
+    margin-bottom: 1rem;
+}
+.modal__img{
+    width: 20%;
+    max-width: 350px;
+}
+.modal__close{
+    text-decoration: none;
+    color: #fff;
+    background-color: brown;
+    padding: 1rem 2rem;
+    border: 1px solid;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 1s;
+}
+.modal__close:hover{
+    color: brown;
+    background-color: #fff;
+}
 
+.notif {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
 
+.tasks {
+    width: 100px;
+    height: 20px;
+    flex-wrap: wrap;
+    border-radius: 5%;
+}
 
 @media (width > 760px) {
-    .board{
+    .board {
         display:  flex;
         flex-direction: row;
     }
 }
 @media (width < 760px) {
-    .board{
+    .board {
         display:  flex;
         flex-direction: column;
         align-items: center;
     }
     .list {
-        width: 70%;
-        margin-bottom: 2rem;
-
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+    .list h2 {
+        font-size: 1.5rem;
+    }
+    .list li {
+        width: 1 rem;
+    }
+    .list input {
+        width: 80%;
+    }
+    .button {
+        width: 80%;
     }
 }
