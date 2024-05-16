@@ -1,6 +1,6 @@
 import React, { Children } from "react";
 
-const SportCard = ({ id, title, description, players, categories }) => {
+const Card = ({ id, title, description, players, categories }) => {
   return (
     <div className="card">
       <h2>{title}</h2>
