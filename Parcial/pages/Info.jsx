@@ -12,7 +12,7 @@ const Info = () => {
 
   const fetchInfo = async (id) => {
     try {
-      const response = await fetch(`api/games/${id}`);
+      const response = await fetch(`http://localhost:3000/api/games/${id}`);
       if (!response.ok) {
         throw new Error("Error al obtener los detalles del deporte");
       }
