@@ -26,7 +26,7 @@ const Info = () => {
   return (
     <div className="detalles">
       <h1>Detalles del Deporte</h1>
-      {sport ? (
+      {game ? (
         <div>
           <Info
             title={game.title}
@@ -43,4 +43,4 @@ const Info = () => {
   );
 };
 
-export default SportDetailsPage;
+export default Info;
