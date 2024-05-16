@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PaginaPrincipal from "./pages/PaginaPrincipal";
-import SportDetailsPage from "./pages/Info";
+import Info from "./pages/Info";
 
 const App = () => {
   return (
