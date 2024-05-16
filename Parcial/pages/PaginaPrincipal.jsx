@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import SportCard from "../components/Card";
+import Card from "../components/Card";
 
 const Info = () => {
   const [game, setGame] = useState([]);
