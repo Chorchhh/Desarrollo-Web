@@ -1,17 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import PaginaPrincipal from "./pages/PaginaPrincipal";
-import Info from "./pages/Info";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import PaginaPrincipal from "../pages/PaginaPrincipal";
+import Info from "../pages/Info";
 
 const App = () => {
   return (
     <Router>
-      <div className="app">
-        <Switch>
-          <Route path="/" exact element={PaginaPrincipal} />
-          <Route path="/games/:id" element={Info} />
-        </Switch>
-      </div>
+          <Routes>
+            <Route path="/" element={<PaginaPrincipal/>} />
+            <Route path="/games/:id" element={<Info/>} />
+          </Routes>
     </Router>
   );
 };

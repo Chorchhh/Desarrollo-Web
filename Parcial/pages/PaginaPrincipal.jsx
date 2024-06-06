@@ -1,44 +1,45 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Card from "../components/Card";
+  import React, { useState, useEffect } from "react";
+  import Card from "../componentes/card/Card";
+  import '../src/index.css'
 
-const Info = () => {
-  const [game, setGame] = useState([]);
+  const PaginaPrincipal = () => {
+    const [games, setGames] = useState([]);
 
-  useEffect(() => {
-    fetchGames();
-  }, []);
+    useEffect(() => {
+      fetchGames();
+    }, []);
 
-  const fetchGames = async () => {
-    try {
-      const response = await fetch("http://localhost:3000/api/games");
-      if (!response.ok) {
-        throw new Error("Error al obtener la lista de deportes");
+    const fetchGames = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/games");
+        if (!response.ok) {
+          throw new Error("Error al obtener la lista de deportes");
+        }
+        const data = await response.json();
+        setGames(data);
+        console.log(data)
+      } catch (error) {
+        console.error("Error:", error);
       }
-      const data = await response.json();
-      setGame(data);
-    } catch (error) {
-      console.error("Error:", error);
-    }
+    };
+
+    return (
+      <div className="Info">
+        <h1>Lista de Deportes</h1>
+        <div>
+          {games.map((game) => (
+              <Card
+                key={game.id}
+                id={game.id}
+                title={game.title}
+                description={game.description}
+                players={game.players}
+                categories={game.categories}
+              />
+          ))}
+        </div>
+      </div>
+    );
   };
 
-  return (
-    <div className="Info">
-      <h1>Lista de Deportes</h1>
-      <div className="Lista">
-        {game.map((game) => (
-          <Link key={game.id} to={`http://localhost:3000/api/games/${game.id}`}>
-            <SportCard
-              title={game.title}
-              description={game.description}
-              players={game.players}
-              category={game.categories}
-            />
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default PaginaPrincipal;
+  export default PaginaPrincipal;

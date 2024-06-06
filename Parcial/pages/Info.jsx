@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Card from "../components/Card";
+import Card from "../componentes/card/Card";
 
 const Info = () => {
   const { id } = useParams();
@@ -18,6 +18,7 @@ const Info = () => {
       }
       const data = await response.json();
       setGame(data);
+      console.log(data)
     } catch (error) {
       console.error("Error:", error);
     }
@@ -26,13 +27,17 @@ const Info = () => {
   return (
     <div className="detalles">
       <h1>Detalles del Deporte</h1>
+      
       {game ? (
         <div>
-          <Info
+          <Card
+            key={game.id}
+            id={game.id}
             title={game.title}
             description={game.description}
             players={game.players}
-            category={game.categories}
+            categories={game.categories}
+            
           />
           <Link to="/">Volver al Inicio</Link>
         </div>

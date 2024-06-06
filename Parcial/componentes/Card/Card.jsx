@@ -1,21 +1,32 @@
-import React, { Children } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const Card = ({ id, title, description, players, categories }) => {
+  const navigate = useNavigate();
   return (
     <div className="card">
       <h2>{title}</h2>
       <p>
-        <strong>Descripción:</strong> {description}
+        Descripción: {description}
       </p>
       <p>
-        <strong>Players:</strong> {players}
+        Players: {players}
       </p>
       <p>
-        <strong>Category:</strong> {categories}
+        Category: {categories}
       </p>
-      {Children}
+      <button
+        style={{ marginRight: "1rem" }}
+        onClick={() => {
+          navigate(`games/${id}`);
+        }}
+      >
+        Ver Detalles
+      </button>
     </div>
   );
 };
 
 export default Card;
+
