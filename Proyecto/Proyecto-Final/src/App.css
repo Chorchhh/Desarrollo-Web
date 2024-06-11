@@ -1,0 +1,10 @@
+.App-light {
+    background-color: white;
+    height: 100vh;
+  }
+  
+  .App-dark {
+    background-color: rgb(4, 4, 4);
+    height: 100vh;
+  }
+  
