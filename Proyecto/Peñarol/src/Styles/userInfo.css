@@ -1,0 +1,31 @@
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+  
+.user-info img {
+    border-radius: 70%;
+    width: 40px;
+    height: 40px;
+    align-content: space-between
+};
+
+  
+.user-info p {
+    margin: 0;
+    font-size: 16px;
+};
+
+.logout-button {
+    border-radius: 70px;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.logout-button:hover {
+    text-decoration: underline;
+}

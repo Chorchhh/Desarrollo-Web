@@ -1,0 +1,31 @@
+.App-light {
+    background-color: white;
+    height: 100vh;
+}
+  
+.App-dark {
+    background-color: rgb(4, 4, 4);
+    height: 100vh;
+    color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(95, 225, 155, 1); 
+}
+
+.header-left{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.trending h2{
+  margin-top: 0;
+}
+main {
+  flex-grow: 1;
+  padding: 1rem;
+}
